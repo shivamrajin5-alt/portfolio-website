@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form fill</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+        
+    }
+
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+        color: #1f2937;
+        line-height: 1.6;
+        min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+        background-color: #1f2a44;
+        color: white;
+        padding: 18px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    header h3 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    header nav a {
+        text-align: right;
+        color: white;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 8px 14px;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+    }
+
+    header nav a:hover {
+        background-color: #3d5a80;
+    }
+
+    hr {
+        border: none;
+        height: 3px;
+        background: #3d5a80;
+    }
+
+    /* Main form area */
+    main {
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    form {
+        background-color: white;
+        width: 100%;
+        max-width: 520px;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 12px 30px rgba(31, 42, 68, 0.15);
+    }
+
+    /* Labels */
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #1f2a44;
+    }
+
+    /* Inputs, select, textarea */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px 14px;
+        margin-bottom: 18px;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        font-size: 1rem;
+        background-color: #f8fafc;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #3d5a80;
+        box-shadow: 0 0 0 3px rgba(61, 90, 128, 0.15);
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    /* Checkbox and radio */
+    .option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        accent-color: #3d5a80;
+    }
+
+    /* Submit button */
+    button {
+        width: 100%;
+        background-color: #1f2a44;
+        color: white;
+        border: none;
+        padding: 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+        background-color: #3d5a80;
+        transform: translateY(-2px);
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 600px) {
+        header {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+
+        form {
+            padding: 22px;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <h3>WELCOME HOMIES</h3>
+        <nav>
+            <a href="./port.html">Home</a>
+        </nav>
+        <hr><br>
+    </header>
+    <main>
+        <!-- <audio src="https://youtu.be/5RT6QMKJTjQ?si=m1pLEfUnEeeUN_Rw" controls>audio</audio> -->
+        <video src="163057-826724397_medium.mp4" controls width="300" autoplay loop muted poster="wp6826485.jpg.jpeg">educational video </video>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter you name" required>
+            <br><br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <br><br>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="password" placeholder="Enter your password" required>
+            <br><br>
+
+            <label for="number">Number:</label>
+            <input type="number" id="number" name="number" placeholder="Enter your mobile number " required>
+            <br><br>
+            <label for="date">DOB</label>
+            <input type="date" id="date" name="DOB" required>
+            <br><BR>
+                <label>Check out your working skills</label><br><br>
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label>
+         
+                <br>
+                <input type="checkbox" id="python" name="skills" value="Python">
+                <label for="python">Python</label>
+         
+                <br>
+                <div class="option">
+                <input type="checkbox" id="Cpp" name="skills" value="C++">
+                <label for="Cpp">C++</label>
+                </div>
+         
+                <br><br>
+                <div class="option">
+                <p>Gender</p>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                </div>
+                <br><br>
+                <label for="city">City:</label>
+                <select name="city" id="city">
+                    <option value="">select city</option>
+                    <option value="Patna">Patna</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Ranchi"> Ranchi</option>
+                    <option value="Raipur">Raipur</option>
+                    <option value="Banglore">Banglore</option>
+                </select>
+                <br><br>
+            <label for="message">Mesaage</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+            <br>
+            <br>
+            <button type="submit" onclick="alert('submitted succesfully')">Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
