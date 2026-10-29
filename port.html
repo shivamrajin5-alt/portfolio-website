@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shivam Portfolio Web</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 206);
+            color: rgb(0, 0, 0);
+            font-family: sans-serif;
+            margin: 0;
+            font-size: large;
+            padding: 18px;
+
+        }
+
+        h1 {
+            color: rgb(163, 61, 61);
+            font: bold;
+            font-size: 60px;
+            height: 30px;
+            margin: 10px 30px;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+        }
+
+        nav {
+            text-align: right;
+            font-size: larger;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-transform: capitalize;
+            padding: 15px;
+            position: sticky;
+            z-index: 100;
+            top: 0;
+        }
+
+        nav a {
+            display: inline-block;
+            background-color: rgb(180, 49, 49);
+            color: rgb(255, 255, 206);
+            padding: 10px 10px;
+            /* margin: 10px; */
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.4s;
+        }
+
+        nav :hover {
+            color: black;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+            background-color: rgb(238, 255, 0);
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-radius: 30%;
+            object-position: center 25%;
+            margin: auto;
+            border: 2px solid #010d14;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-text {
+            color: rgb(126, 4, 4);
+            text-align: center;
+            margin: 0px;
+            padding-bottom: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+
+        }
+
+        #home {
+            display: block;
+            background-color: rgb(253, 157, 157);
+            padding: 20px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px;
+            border: 2px solid black;
+            border-radius: 8px;
+            margin: 30px 10px;
+        }
+
+        #about {
+            background-color: white;
+            color: rgb(255, 26, 26);
+            display: block;
+            border-radius: 8px;
+            border: 2px solid rgb(0, 0, 0);
+            /* margin: 20px 20px; */
+            padding: 18px;
+            margin: 30px 10px;
+        }
+
+        .ab {
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        #education {
+
+            text-align: center;
+            display: inline-block;
+            border: 2px solid black;
+            background-color: white;
+            color: rgb(255, 8, 8);
+            margin: 30px 10px;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            text-align: center;
+        }
+
+        /* Table heading */
+        .table th {
+            padding: 20px;
+            font-size: 23px;
+            background-color: #b43131;
+            color: white;
+        }
+
+        .table td {
+            padding: 20px;
+            font-size: 20px;
+
+        }
+
+        /* Alternate row colors */
+        .table tr:nth-child(even) {
+            background-color: #fff0d6;
+        }
+
+        /* Hover effect */
+        .table tr:hover {
+            background-color: #9fd4d8;
+        }
+
+        #skills {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 10px;
+        }
+
+        #skills h2 {
+            text-align: center;
+            color: rgb(180, 49, 49);
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-card {
+            background-color: rgb(255, 255, 206);
+            border: 2px solid rgb(180, 49, 49);
+            border-radius: 12px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill-card h3 {
+            color: rgb(163, 61, 61);
+        }
+
+        .skill-card p {
+            color: black;
+            font-size: 16px;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+            background-color: rgb(255, 240, 214);
+        }
+
+        #projects {
+            background-color: white;
+            color: black;
+            padding: 25px;
+            margin: 30px 10px;
+            border: 2px solid #010d14;
+            border-radius: 8px;
+        }
+
+        #projects h2 {
+            text-align: center;
+            color: rgb(180, 49, 49);
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .pro-contain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .pcard {
+            background-color: rgb(255, 255, 206);
+            border: 2px solid rgb(180, 49, 49);
+            border-radius: 12px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .pcard h3 {
+            color: rgb(163, 61, 61);
+        }
+
+        .pcard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+            background-color: rgb(255, 240, 214);
+        }
+
+        #contact {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 10px;
+        }
+
+        #contact h2 {
+            text-align: center;
+            color: rgb(180, 49, 49);
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .con a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            margin: 10px;
+            background-color: wheat;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .con a:hover {
+            background-color: brown;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .form {
+            text-align: center;
+            color: orangered;
+
+        }
+
+        .form a {
+            text-decoration: underline;
+            display: block;
+            transition: 0.3s;
+
+        }
+
+        .form a:hover {
+            background-color: yellow;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+
+        @media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        text-align: center;
+    }
+}
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+        <h1>SHIVAM RAJ</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section id="home">
+
+            <div class="photo-text">
+                <h2>Welcome</h2>
+                <p>I am a <b>BCA </b>student at <strong>CIMAGE Group of Institutions</strong>, Patna.</p>
+            </div>
+            <img src="./ln profile photo.jpeg" alt="Profile Photo" class="profile-photo">
+        </section>
+
+        <section id="about">
+            <h2 class="ab">👤 About Me</h2>
+
+            <p>
+                I am a <b>BCA</b> student at <b>CIMAGE Group of Institutions</b>, Patna,
+                with a strong interest in technology and software development.
+                I enjoy learning programming, building projects, and exploring new technologies.
+            </p>
+            <details>
+                <summary>Click here to know more about me </summary>
+                <p>
+                    I have learned <strong>C++, Python, problem-solving, Git and GitHub, and MS Office</strong>.
+                    Currently, I am learning <b>HTML</b> and <b>web development</b>
+                    while also exploring areas like <i>cybersecurity</i>.
+                </p>
+
+                <p>
+                    I believe in learning by doing and continuously improving my technical skills
+                    through <strong>projects</strong> and <strong>challenges</strong>.
+                </p>
+            </details>
+        </section>
+        <section id="education">
+            <h2>🎓 Education Qualification</h2>
+
+
+            <table class="table">
+
+                <tr>
+                    <th>Category</th>
+                    <th>Matriculation</th>
+                    <th>Intermediate</th>
+                </tr>
+
+                <tr>
+                    <th>Board</th>
+                    <td>CBSE</td>
+                    <td>BSEB</td>
+                </tr>
+
+                <tr>
+                    <th>Marks</th>
+                    <td>401</td>
+                    <td>382</td>
+                </tr>
+
+                <tr>
+                    <th>Percentage</th>
+                    <td>80.2%</td>
+                    <td>76.4%</td>
+                </tr>
+
+            </table>
+        </section>
+
+        <br>
+
+        <section id="skills">
+            <h2>🛠️ My Skills</h2>
+
+            <div class="skills-container">
+
+                <div class="skill-card">
+                    <h3>💻 C++</h3>
+                    <p>Programming Fundamentals & OOPs</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🐍 Python</h3>
+                    <p>Programming & Automation</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🧠 Problem Solving</h3>
+                    <p>Logical Thinking & Problem Solving</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🔗 Git & GitHub</h3>
+                    <p>Version Control & Project Management</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🌐 HTML & CSS</h3>
+                    <p>Currently Learning Web Development</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>🔐 Cybersecurity</h3>
+                    <p>Exploring Security Fundamentals</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>🚀 My Projects</h2>
+            <div class="pro-contain">
+
+                <div class="pcard">
+                    <h3>🤖 AI Assistant</h3>
+                    <p>Python-based assistant for basic automation tasks.</p>
+                </div>
+                <div class="pcard">
+                    <h3>📋 Attendance System</h3>
+                    <p>A digital college attendance management system.</p>
+                </div>
+                <div class="pcard">
+                    <h3>🔐 Log Security Analysis</h3>
+                    <p>Python project for analyzing system log information.</p>
+                </div>
+
+
+            </div>
+
+        </section>
+        <section id="contact">
+            <h2>🔗 Connect With Me</h2>
+            <div class="con">
+
+                <a href="https://github.com/shivamrajin5-alt" target="_blank" rel="noopener">
+                    GitHub
+                    <img src="Github-Logo-PNG-Photo-1.png" alt="GitHub" width="40">
+                </a>
+
+                <a href="https://www.linkedin.com/in/shivam-raj-198b9542b" target="_blank" rel="noopener">
+                    LinkedIn <img src="./linkedin-in-logo-png-1.png" alt="LinkedIn" width="40"></a><br>
+                <p class="form">Fill the <a href="./form.html">form</a></p>
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/W1y8blwMLxY?si=QeGw_KXQSsXVr_wx"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+    <hr>
+    <footer>
+        <p>&copy; 2026 Shivam Raj | My Portfolio</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </footer>
+
+
+</body>
+
+</html>
