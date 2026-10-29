@@ -47,5 +47,5 @@ I'm currently learning programming with C++ and Python while exploring web devel
 
 I believe in learning by building projects and continuously improving my problem-solving skills.
 
-⭐ Thank you for visiting my portfolio repository!
+⭐ Thank you for visiting my portfolio repository! Have a good day
 
