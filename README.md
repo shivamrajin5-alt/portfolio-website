@@ -47,11 +47,5 @@ I'm currently learning programming with C++ and Python while exploring web devel
 
 I believe in learning by building projects and continuously improving my problem-solving skills.
 
-## 🔗 Connect With Me
-
-* **GitHub:** [@shivamrajin5-alt](https://github.com/shivamrajin5-alt)
-
----
-
 ⭐ Thank you for visiting my portfolio repository!
 
