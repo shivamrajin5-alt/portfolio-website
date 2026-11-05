@@ -28,7 +28,35 @@
             font-family: 'Times New Roman', Times, serif;
             padding: 10px;
         }
+        #theme {
+    padding: 5px;
+    border-radius: 15px;
+    background-color: white;
+    color: #121212;
+    margin: 10px;
+    position: relative;
+    left: 790px;
+    bottom: 20px;
+}
 
+body.dark #home,
+body.dark #about,
+body.dark #skills,
+body.dark #projects,
+body.dark #contact,
+body.dark #education {
+    background-color: #242424;
+    color: white;
+}
+
+#theme:hover {
+    background-color: rgb(255, 9, 9);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+        
         nav {
             text-align: right;
             font-size: larger;
@@ -314,6 +342,8 @@
     <header>
 
         <h1>SHIVAM RAJ</h1>
+        <button id = "theme">Change Theme</button>
+        
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -485,7 +515,12 @@
         </nav>
     </footer>
 
-
+        <script>
+        let btn = document.getElementById("theme")
+        btn.addEventListener("click", function(){
+            document.body.classList.toggle("dark");
+        });
+    </script>
 </body>
 
 </html>
